@@ -33,7 +33,7 @@ const Home = () => {
   const handleUsername = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     console.log('sending username...')
-    socket.emit('login', { username, room })
+    socket.emit('login', { username, room }) //emits a 'login' event to the server
 
     // by the way, on the server...
     // socket.on('setUsername', ({username}) => {})
